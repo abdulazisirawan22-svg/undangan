@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Irawan & Dita</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f5efe6;
+  color:#3b2f2f;
+  text-align:center;
+}
+section{padding:55px 20px;}
+h1,h2{font-family:'Playfair Display',serif;}
+.ornamen{font-size:28px; color:#9c7a3c;}
+
+.cover{
+  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+  url("https://images.unsplash.com/photo-1609997834950-c8c7c9e2e4b5");
+  background-size:cover;
+  background-position:center;
+  min-height:100vh;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.btn{
+  padding:12px 26px;
+  background:#9c7a3c;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:15px;
+  border:none;
+}
+
+.card{
+  background:white;
+  max-width:700px;
+  margin:20px auto;
+  padding:28px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px;
+}
+.gallery img{
+  width:100%;
+  border-radius:14px;
+}
+
+input, textarea{
+  width:90%;
+  max-width:500px;
+  padding:10px;
+  margin:8px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+.comment{
+  background:#f3ede2;
+  padding:10px;
+  margin:10px auto;
+  border-radius:10px;
+  max-width:600px;
+  text-align:left;
+}
+.nama{font-size:42px;}
+.countdown{font-size:20px;font-weight:500;}
+</style>
+</head>
+
+<body>
+
+<audio id="musik" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_8f1a3f34c6.mp3">
+</audio>
+
+<!-- COVER -->
+<section class="cover">
+  <p>Kepada Yth.</p>
+  <h3 id="namaTamu">Tamu Undangan</h3>
+  <h1 class="nama">Irawan & Dita</h1>
+  <p>Resepsi Pernikahan</p>
+  <button class="btn" onclick="playMusic()">Buka Undangan</button>
+</section>
+
+<!-- MEMPELAI -->
+<section data-aos="fade-up">
+  <div class="ornamen">❦</div>
+  <div class="card">
+    <h2>Mempelai Pria</h2>
+    <p><strong>Abdul Azis Irawan</strong><br>
+    Putra ke-2<br>
+    Bapak Siswanto & Ibu Karsiti</p>
+  </div>
+  <div class="card">
+    <h2>Mempelai Wanita</h2>
+    <p><strong>Dita Maranata</strong><br>
+    Putri ke-3<br>
+    Bapak Sujadi & Ibu Sriyani</p>
+  </div>
+</section>
+
+<!-- DOA -->
+<section data-aos="fade-up">
+  <div class="card">
+    <h2>Doa Pernikahan</h2>
+    <p>
+      “Semoga Allah menghimpun yang terserak dari keduanya,  
+      memberkahi mereka berdua, dan menjadikan rumah tangga  
+      mereka sakinah, mawaddah, wa rahmah.”
+    </p>
+  </div>
+</section>
+
+<!-- ACARA -->
+<section data-aos="zoom-in">
+  <div class="card">
+    <h2>Resepsi / Ngunduh Mantu</h2>
+    <p>
+      Sabtu (Pon)<br>
+      11 April 2026<br>
+      09.00 WIB – Selesai
+    </p>
+    <p>
+      Gg. Blok-M Pandan Arum (Mudinan)<br>
+      Ds. Gentong, Kec. Paron, Kab. Ngawi
+    </p>
+    <a class="btn" target="_blank"
+    href="https://maps.app.goo.gl/YiQYGLW462zbYAr5A">📍 Google Maps</a>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section data-aos="fade-up">
+  <div class="card">
+    <h2>Menuju Hari Bahagia</h2>
+    <div id="countdown" class="countdown">Loading...</div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section data-aos="fade-up">
+  <h2>Galeri Foto</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+    <img src="https://images.unsplash.com/photo-1520857014576-2c4f4c972b57">
+    <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2">
+  </div>
+</section>
+
+<!-- RSVP -->
+<section data-aos="fade-up">
+  <div class="card">
+    <h2>Konfirmasi Kehadiran</h2>
+    <a class="btn"
+    href="https://wa.me/628XXXXXXXXX?text=Assalamualaikum,%20saya%20akan%20hadir%20di%20acara%20pernikahan%20Irawan%20%26%20Dita"
+    target="_blank">💬 Konfirmasi via WhatsApp</a>
+    <p style="font-size:12px">*ganti nomor WA</p>
+  </div>
+</section>
+
+<!-- UCAPAN -->
+<section data-aos="fade-up">
+  <div class="card">
+    <h2>Ucapan & Doa</h2>
+    <input id="nama" placeholder="Nama">
+    <textarea id="pesan" placeholder="Ucapan"></textarea>
+    <button class="btn" onclick="kirimUcapan()">Kirim</button>
+    <div id="listUcapan"></div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:1200, once:true});
+
+function playMusic(){
+  document.getElementById("musik").play();
+}
+
+// nama tamu
+const p=new URLSearchParams(location.search);
+if(p.get("to")){
+  document.getElementById("namaTamu").innerText=
+  decodeURIComponent(p.get("to").replace(/\+/g," "));
+}
+
+// countdown
+const t=new Date("2026-04-11T09:00:00").getTime();
+setInterval(()=>{
+  const n=new Date().getTime(),d=t-n;
+  if(d<0)return document.getElementById("countdown").innerHTML="Hari ini 💍";
+  document.getElementById("countdown").innerHTML=
+  `${Math.floor(d/86400000)} hari ${Math.floor(d%86400000/3600000)} jam ${Math.floor(d%3600000/60000)} menit`;
+},1000);
+
+// ucapan (local)
+function kirimUcapan(){
+  const n=nama.value,p=pesan.value;
+  if(!n||!p)return;
+  const d=document.createElement("div");
+  d.className="comment";
+  d.innerHTML=`<strong>${n}</strong><br>${p}`;
+  listUcapan.prepend(d);
+  nama.value=pesan.value="";
+}
+</script>
+
+</body>
+</html>
